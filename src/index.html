@@ -1,80 +1,86 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sleep Outside | Home</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <script src="account/index.html" type="module"></script>
-  </head>
-  <body>
-    <header id="main-header" class="divider"></header>
-    <div
-      id="breadcrumb-container"
-      class="breadcrumb-container"
-      style="display: none"
-    >
-      <a href="/">Home</a> > <span id="breadcrumb-content"></span>
-    </div>
-    <div class="register">
-      <a href="/account/index.html">Register Now</a>
-    </div>
-    <main class="divider">
-      <div class="hero">
-        <img
-          src="images/banner-sm.jpg"
-          srcset="images/banner-sm.jpg 500w, images/banner.jpg"
-          alt="image of a high mountain lake"
-        />
-        <div class="logo logo--square">
-          <img src="images/noun_Tent_2517.svg" alt="tent image for logo" />
-          <div>Sleep<span class="highlight">Outside</span></div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="js/main.js"></script> 
+    <title>Starter Tips for D&D Beginners</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div id="nav-header">
+                <div id="nav-left">
+                    <div id="nav-header-text">
+                        <h1>B&D</h1>
+                        <p>Beginners and Dungeons</p>
+                    </div>
+                </div>
+                <button id="hamburger" title="menu-button"></button>
+            </div>
+            <ul>
+                <li><a href="/" title="Home" class="active">Home</a></li>
+                <li><a href="dice/index.html" title="Dice">Dice</a></li>
+                <li><a href="tips/index.html" title="Tips" >Tips</a></li>
+                <li><a href="feedback/index.html" title="Feedback">Feedback</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="hero">
+            <div id="hero-left">
+                <h2>You've come to the right place to learn D&D</h2>
+                <p>
+                    Whether its your first time playing D&D or a returning member check out these 
+                    starter tips for enjoying and learning this table-top game!
+                </p>
+                <a href="tips/index.html">See Tips</a>
+            </div>
+            <div id="hero-right">
+                <img src="public/images/dragon.svg" alt="homepage hero image" width="400px" height="350px" loading="lazy">
+            </div>
         </div>
-      </div>
-      <section class="mission">
-        <h3>This is a test for Production!</h3>
-        <p>We spend too much time these days indoors...sitting usually.</p>
-        <p>No wonder we are a mess!</p>
-        <p>
-          What we really need is to get outside...in fact SLEEP outside. Our
-          mission is to provide you with everything you need to do this
-          comfortably at an affordable price.
-        </p>
-      </section>
-      <section class="products">
-        <ul class="product-icons">
-          <li>
-            <a href="product_listing/index.html?category=tents">
-              <img src="public/images/tent.svg" alt="Tent Icon" />
-              <h2>Tents</h2>
-            </a>
-          </li>
-          <li>
-            <a href="product_listing/index.html?category=backpacks">
-              <img src="public/images/backpack.svg" alt="Backpack Icon" />
-              <h2>Backpacks</h2>
-            </a>
-          </li>
-          <li>
-            <a href="product_listing/index.html?category=sleeping-bags">
-              <img
-                src="public/images/sleeping_bag.svg"
-                alt="Sleeping Bag Icon"
-              />
-              <h2>Sleeping Bags</h2>
-            </a>
-          </li>
-          <li>
-            <a href="product_listing/index.html?category=hammocks">
-              <img src="public/images/hammock.svg" alt="Hammock Icon" />
-              <h2>Hammocks</h2>
-            </a>
-          </li>
-        </ul>
-      </section>
+        <div id="dice">
+            <img src="public/images/dice.svg" alt="image of dice" width="400px" height="300px" loading="lazy">
+            <div id="dice-text">
+                <p>
+                    An essential part of every table-top session of D&D that you will play will 
+                    include dice so be sure to use this free online tool to help!
+                </p>
+                <a href="dice/index.html">Roll Dice</a>
+            </div>
+        </div>
+        <div id="feedback">
+            <div id="feedback-text">
+                <p>
+                    This is a new site so it may be missing some important tools you would like to see. 
+                    Wanna give some suggestions or feedback about the page? Fill out an online form to help the page grow!
+                </p>
+                <a href="feedback/index.html">Give Feedback</a>
+            </div>
+            <img src="public/images/books.svg" alt="image of a book" width="400px" height="300px" loading="lazy">
+        </div>
     </main>
-    <footer id="main-footer">
-      <!-- &copy;NOT a real business -->
+    <footer>
+        <div id="right-footer">
+            <h3>Chandler Murphy</h3>
+            <p>chandlermurphy02@gmail.com</p>
+            <p>(385) 377-4130</p>
+        </div>
+        <div id="social-footer">
+            <a href="https://www.facebook.com/chandler.murphy.391" title="Chandler Facebook Profile Link">
+                <img src="public/images/fb-icon.png" alt="Facebook Logo">
+            </a>
+            <a href="https://www.linkedin.com/in/chandler-murphy/" title="Chandler Murphy Indeed Profile Link">
+                <img src="public/images/indeed-icon.png" alt="Indeed Logo">
+            </a>
+        </div>
+        <div id="left-footer">
+            <p>WDD 231 Final Project</p>
+            <p>© <span id="currentyear"></span></p>
+            <p class="last-updated">Last Modification: <span id="lastUpdated"></span></p>
+        </div>
     </footer>
-  </body>
+</body>
 </html>

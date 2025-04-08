@@ -1,410 +1,1077 @@
-:root {
-  --font-body: Arial, Helvetica, sans-serif;
-  --font-headline: Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  /* colors */
-  --primary-color: #f0a868;
-  --secondary-color: #525b0f;
-  --tertiary-color: #a4b8c4;
-  --light-grey: #d0d0d0;
-  --dark-grey: #303030;
-
-  /* sizes */
-  --font-base: 18px;
-  --small-font: 0.8em;
-  --large-font: 1.2em;
+* {
+  margin: 0;
+  font-family: Helvetica, Arial, sans-serif;
 }
 
-* {
-  box-sizing: border-box;
+main {
+  background-color: #f8f4e8;
 }
 
 body {
-  margin: 0;
-  font-family: var(--font-body);
-  font-size: var(--font-base);
-  color: var(--dark-grey);
+  background-color: #f8f4e8;
 }
 
-img {
-  max-width: 100%;
+/* Header */
+nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #065e7f;
+  color: white;
 }
 
-header {
+#nav-header {
   display: flex;
   justify-content: space-between;
-  padding: 0 10px;
+  width: 100%;
+  align-content: center;
 }
 
-.logo {
-  line-height: 60px;
-  width: 245px;
-  overflow: hidden;
+#nav-left {
   display: flex;
-  font-size: 30px;
-  text-align: right;
-  font-family: var(--font-headline);
+  padding: 10px;
 }
 
-.logo img {
+h1 {
+  margin: 0;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#hamburger {
+  border: none;
+  background: none;
+  font-size: xx-large;
+  padding: 10px;
+  color: white;
+}
+
+#hamburger:hover {
+  cursor: pointer;
+}
+
+#hamburger::before {
+  content: "☰";
+}
+
+#hamburger.open-ham::before {
+  content: "X";
+}
+
+ul {
+  display: none;
+  list-style: none;
+}
+
+ul a {
+  color: white;
+  text-decoration: none;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.open-nav {
+  padding: 0px;
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.open-nav li {
+  display: block;
+}
+
+.open-nav a {
+  display: block;
+  padding: 15px;
+  border-bottom: 2px solid white;
+}
+
+.open-nav > :first-child {
+  border-top: 2px solid white;
+}
+
+.active {
+  color: white;
+  text-decoration: 2px underline;
+  text-underline-offset: 3px;
+}
+
+/* Footer */
+footer {
+  background-color: #065e7f;
+  padding: 10px;
+  font-family: Helvetica, Arial, sans-serif;
+  color: white;
+}
+
+#social-footer {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  background-color: #f8f4e8;
+  border-radius: 5px;
+  width: 150px;
+  margin: 20px auto;
+}
+
+#social-footer a img {
   width: 60px;
   height: 60px;
 }
 
-.logo a {
-  text-decoration: none;
-  color: var(--font-body);
+#social-footer a {
+  display: block
 }
 
-.hero {
+/* Home Page Hero Banner vvv */
+#hero {
+  text-align: center;
+  position: relative; 
+  width: 100%;
+  height: 350px; 
+  border-bottom: 5px solid gray;
+}
+
+
+#hero-right {
   position: relative;
+  overflow: hidden;
 }
 
-.hero .logo {
+#hero-left {
   position: absolute;
-  left: calc(50% - 60px);
-  bottom: -10px;
-  background-color: white;
+  top: 50px; 
+  left: 20px;
+  right: 20px; 
+  z-index: 1;
+  color: white; 
+  background-color: rgba(0, 0, 0, 0.5); 
+  border-radius: 5px;
+  padding: 10px; 
+  max-width: 500px;
+  margin: 0 auto;
 }
 
-.logo--square {
-  font-size: var(--small-font);
-  width: 110px;
-  height: 80px;
-
-  flex-direction: column;
-  align-items: flex-end;
-  box-shadow: 1px 1px 4px var(--light-grey);
-  justify-content: center;
-  align-items: center;
-  line-height: 1;
+#hero-left h2 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-.logo--square img {
-  width: 90px;
-  height: 90px;
-  margin-top: -1.3em;
+#hero-left h2, #hero-left p, #hero-left a {
+  margin: 20px;
 }
 
-.logo--square>div {
-  margin-top: -1.7em;
-}
-
-/* utility classes */
-.highlight {
-  color: var(--tertiary-color);
-}
-
-button {
-  padding: 0.5em 2em;
-  background-color: var(--secondary-color);
+#hero-left a {
+  display: inline-block;
   color: white;
-  margin: auto;
-  display: block;
-  border: 0;
-  font-size: var(--large-font);
-  cursor: pointer;
+  margin: 10px;
+  padding: 10px;
+  background-color: white;
+  border-radius: 5px;
+  color: black;
+  text-decoration: none;
 }
 
-.divider {
-  border-bottom: 2px solid var(--primary-color);
+/* Home Page Dice Card vvv */
+#dice {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-/* End utility classes */
+#dice-text {
+  color: white; 
+  background-color: #545454; 
+  border-radius: 5px;
+  padding: 10px; 
+  width: 85%;
+  max-width: 500px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
 
-/* Product Icon styles */
-.product-icons {
+#dice-text p {
+  padding: 10px;
+}
+
+#dice-text a {
+  display: inline-block;
+  color: white;
+  margin: 10px;
+  padding: 10px;
+  background-color: white;
+  border-radius: 5px;
+  color: black;
+  text-decoration: none;
+}
+
+/* Home Page Feedback Card vvv */
+#feedback {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#feedback-text {
+  color: white; 
+  background-color: #545454; 
+  border-radius: 5px;
+  padding: 10px; 
+  width: 85%;
+  max-width: 500px;
+  margin: 0 auto;
+  margin-bottom: 60px;
+  order: 2;
+}
+
+#feedback img {
+  order: 1;
+}
+
+#feedback-text a {
+  display: inline-block;
+  color: white;
+  margin: 10px;
+  padding: 10px;
+  background-color: white;
+  border-radius: 5px;
+  color: black;
+  text-decoration: none;
+}
+
+#feedback-text p {
+  padding: 10px;
+}
+
+/* Dice Roller Page */
+#dice-header {
+  background-color: #545454;
+  width: 80%;
+  margin: 20px auto;
+  text-align: center;
+  color: white;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+#dice-header h2 {
+  padding: 10px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#dice-header p {
+  padding: 10px;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+#dice-cards {
+  width: 90%;
+  text-align: center;
+  margin: 0 auto;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  list-style: none;
-  text-align: center;
-}
-
-.product-icons li img {
-  width: 100px;
-  height: auto;
-}
-
-.product-icons li h2 {
-  color: black;
-}
-
-.product-icons li a {
-  color: black;
-  text-decoration: none;
-}
-
-/* Bread Crumb styles */
-.breadcrumb-container {
-  margin: 20px 15px;
-  font-size: 14px;
-  color: #333;
-}
-
-.breadcrumb-container a {
-  text-decoration: none;
-  color: #0066cc;
-}
-
-.breadcrumb-container a:hover {
-  text-decoration: underline;
-}
-
-.breadcrumb-container span {
-  font-weight: bold;
-}
-
-
-
-/* Cart icon styles */
-.cart {
-  width: 50px;
-  height: 50px;
-  padding-top: 1em;
-  position: relative;
-  text-align: center;
-  display: inline-block;
-}
-
-.cart a {
-  width: 100%;
-  height: 100%;
-  text-decoration: none;
-}
-
-.cart svg {
-  width: 35px;
-}
-
-.cart:hover svg {
-  fill: gray;
-}
-
-.cart_count {
-  position: relative;
-  top: -40px;
-  right: -25px;
-  background-color: #f0a868;
-  color: #525b0f;
-  font-size: 12px;
-  font-weight: bold;
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  max-width: 100%;
 }
 
-/* Cart icon animation */
-
-#icon-cart-animate:hover {
-  transform: rotate(100deg);
-  transition: transform 1s ease-in-out;
-  width: 50px;
-  height: 50px;
-  position: absolute;
-  /* background-color: red; */
-}
-
-/* End cart icon styles */
-
-.mission {
-  padding: 0 0.5em;
-  /* margin: 0.5em 0; */
-  line-height: 1.3;
-  max-width: 600px;
-  margin: auto;
-}
-
-.products {
-  padding: 0.5em;
-}
-
-.product-list {
+.dice-roller {
+  width: 250px;
+  margin: 32px auto;
+  padding: 32px;
   display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  list-style-type: none;
-  padding: 0;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  border-bottom: 5px solid gray;
 }
 
-.product-list a {
-  text-decoration: none;
-  color: var(--dark-grey);
+#d4 {
+  border-top: 5px solid gray;
 }
 
-/* Styles for product lists */
-
-.product-card {
-  flex: 1 1 45%;
-  margin: 0.25em;
-  padding: 0.5em;
-  border: 1px solid var(--light-grey);
-  max-width: 250px;
+.dice-roller img {
+  width: 250px;
+  height: 250px;
+  margin-bottom: 32px;
 }
 
-.product-card h2,
-.product-card h3,
-.product-card p {
-  margin: 0.5em 0;
+.dice-roller button {
+  margin: 16px;
+  padding: 20px 50px;
+  border-radius: 6px;
 }
 
-.card__brand {
-  font-size: var(--small-font);
+.dice-roller button:hover {
+  cursor: pointer;
 }
 
-.card__name {
-  font-size: 1em;
+.dice-roller span {
+  background-color: #EFEFEF;
+  border: 2px solid black;
+  padding: 20px 50px;
+  font-family: "Merriweather", Arial, Helvetica, sans-serif;
+  align-self: center;
+  border-radius: 6px;
 }
 
-/* End product list card */
+/* Form Feedback Page */
+#form-heading {
+  margin: 32px auto;
+  text-align: center;
+  background-color: #545454;
+  padding: 20px;
+  color: white;
+  border-radius: 5px;
+  width: fit-content;
+  width: 60%;
+}
 
-.product-detail {
-  padding: 1em;
+#form-heading p {
+  margin: 10px;
+  text-align: center;
+  justify-self: center;
+  width: 80%;
+}
+
+#form-heading h2 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  width: 80%;
+  margin: 0 auto;
+}
+
+#feedback-form fieldset {
   max-width: 500px;
-  margin: auto;
+  margin: 20px;
+  justify-self: center;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 16px;
+  background-color: #EFEFEF;
 }
 
-.product-detail img {
+#feedback-form label {
+  display: block;
+}
+
+#feedback-form select {
+  background-color: white;
+  display: block;
+  border: solid 1px #999;
+  border-radius: 6px;
+  padding: 17px;
+  color: #555;
   width: 100%;
+  appearance: none;
+  margin: .5rem 0;
 }
 
-/* Start cart list card styles */
-.cart-card {
-  display: grid;
-  grid-template-columns: 25% auto 15% 10%;
-  font-size: var(--small-font);
-  /* max-height: 120px; */
+#rating {
+  margin-top: 40px;
+}
+
+#radioButtons {
+  display: flex;
+  margin: .2rem;
+  justify-content: space-between;
   align-items: center;
 }
 
-.cart-card__image {
-  grid-row: 1/3;
-  grid-column: 1;
+.ratingButton {
+  margin: 4px 0;
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
 }
 
-.cart-card p {
-  margin-top: 0;
+#dateLabel {
+  margin-top: 4px;
+  max-width: 90%;
 }
 
-.cart-card .card__name {
-  grid-row: 1;
-  grid-column: 2;
-}
-
-.cart-card__color {
-  grid-row: 2;
-  grid-column: 2;
-}
-
-.cart-card__quantity {
-  grid-row: 1;
-  grid-column: 3;
-}
-
-.cart-card__price {
-  grid-row: 2;
-  grid-column: 3;
-}
-
-.cart-card__remove {
-  grid-row: 1/3;
-  grid-column: 4;
-  align-content: center;
-  align-self: center;
-  border: 1px solid var(--primary-color);
-  padding: 0.5em;
-  cursor: pointer;
-}
-
-/* Register Account Styles */
-/*   --primary-color: #f0a868;
-  --secondary-color: #525b0f;
-  --tertiary-color: #a4b8c4;
-  --light-grey: #d0d0d0;
-  --dark-grey: #303030; */
-
-.accountForm {
-  margin-bottom: 1.2rem;
-}
-
-.accountForm label {
+#reviewDate {
   display: block;
-  margin-bottom: 0.5rem;
-  font-weight: bold;
-  font-size: 1.4rem;
-}
-
-.accountForm input {
+  background-color: white;
+  border: solid 1px #999;
+  border-radius: 6px;
+  padding: 17px;
+  color: #555;
   width: 100%;
-  padding: 0.8rem;
-  border-radius: 4px;
-  font-size: 1rem;
-  margin-bottom: 0.5rem;
+  appearance: none;
+  margin: 8px 0;
 }
 
-#register-btn {
-  display: inline-block;
-  background-color: #525b0f;
-  border: none;
-  cursor: pointer;
-  font-size: 1.2rem;
-  border-radius: 4px;
-  margin-bottom: 1rem;
-}
-#register-btn:hover {
-  background: #a4b8c4;
+#favFeatureLabel {
+  margin-top: 40px;
 }
 
-
-@media screen and (min-width: 500px) {
-  body {
-    max-width: 1080px;
-    margin: auto;
-  }
-
-  .mission {
-    font-size: 1.2em;
-  }
-
-  .cart-card {
-    font-size: inherit;
-    grid-template-columns: 150px auto 15% 10%;
-  }
+#reviewLabel {
+  margin-top: 32px;
+  margin-bottom: 4px;
 }
 
-/* Empty cart styles */
-.empty-cart-banner {
+#suggestionLabel {
+  margin-top: 32px;
+  margin-bottom: 4px;
+}
+
+.writtenReview {
+  width: 100%;
+  border: solid 1px #999;
+  border-radius: 6px;
+  margin-top: .5rem;
+}
+
+#nameLabel {
+  margin-top: 40px;
+}
+
+#name {
+  display: block;
+  background-color: white;
+  border: solid 1px #999;
+  border-radius: 6px;
+  padding: 17px;
+  color: #555;
+  width: 90%;
+  appearance: none;
+  margin: 4px 0;
+}
+
+#giveSuggestion {
+  width: 100%;
+  margin-top: 32px;
+  padding: 18px;
+  border: solid 1px #999;
+  background-color: #065e7f;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: white;
+  border-radius: 6px;
+  font-size: large;
+  font-weight: bold;
+  appearance: none;
+}
+
+.blue {
+  color: #0707a2;
+  font-size: smaller;
+}
+
+form {
+  margin-bottom: 32px;
+}
+
+/* Form Feedback Success Page */
+#form-results {
   text-align: center;
-  padding: 1em;
+}
+
+#form-results h2 {
+  margin: 30px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#results {
+  width: 60%;
+  margin: 10px auto;
+  background-color: #545454;
+  border-radius: 5px;
+}
+
+.results-title {
+  font-weight: bold;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#results p {
+  color: white;
+  text-align: left;
+  padding: 10px;
+}
+
+#form-results h3 {
+  width: 70%;
+  margin: 30px auto;
+}
+
+#form-results p {
+  margin: 30px;
+  font: bold;
+}
+
+/* Tips Page Intro Heading Box vvv */
+#intro {
+  margin: 32px auto;
+  text-align: center;
+  background-color: #545454;
+  padding: 20px;
+  color: white;
+  border-radius: 5px;
+  width: fit-content;
+  width: 60%;
+}
+
+#intro p {
+  margin: 20px 10px 10px;
+  text-align: center;
+  justify-self: center;
   width: 80%;
-  border: 2px solid var(--primary-color);
-  margin: auto;
 }
 
-footer {
-  font-size: var(--small-font);
-  padding: 1em;
+#intro h2 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  width: 80%;
+  margin: 0 auto;
 }
 
-.hide {
-  display: none;
+/* Tips Page "What" Section vvv */
+#what {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 80px 0;
 }
 
-/* Alert */
-.alert-list {
-  margin: 10px;
+#what-text {
+  color: white; 
+  background-color: #545454; 
+  border-radius: 5px;
+  padding: 10px; 
+  width: 85%;
+  max-width: 500px;
+  margin: 0 auto;
+  margin-bottom: 60px;
+  order: 1;
 }
 
-.alert {
+#what img {
+  order: 2;
+}
+
+#what-text p {
+  padding: 10px;
+}
+
+#what-text h3 {
+  padding: 10px 0;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Tips Page "Starting" Section vvv */
+#starting {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 80px 0;
+}
+
+#starting-text {
+  color: white; 
+  background-color: #545454; 
+  border-radius: 5px;
+  padding: 10px; 
+  width: 85%;
+  max-width: 500px;
+  margin: 0 auto;
+  margin-bottom: 60px;
+  order: 1;
+}
+
+#starting-text li {
+  padding: 10px;
+}
+
+#starting-text ol {
+  padding-top: 10px;
+}
+
+#starting-text h3 {
+  padding: 10px 0;
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#starting img {
+  order: 2;
+}
+
+/* Tips Page "Characters" Section vvv */
+#characters {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 80px 0;
+}
+
+#characters-text {
+  color: white; 
+  background-color: #545454; 
+  border-radius: 5px;
+  padding: 10px; 
+  width: 85%;
+  max-width: 500px;
+  margin: 0 auto;
+  margin-bottom: 60px;
+  order: 1;
+}
+
+#characters img {
+  order: 2;
+}
+
+#characters-text p {
+  padding: 10px;
+  text-align: center;
+}
+
+#characters-text li {
+  padding: 10px;
+}
+
+#characters-text ol {
+  padding-top: 10px;
+}
+
+#characters-text h3 {
+  padding: 10px 0;
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Tips Page "Where" Section vvv */
+#where {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 80px 0;
+}
+
+#where-text {
+  color: white; 
+  background-color: #545454; 
+  border-radius: 5px;
+  padding: 10px; 
+  width: 85%;
+  max-width: 500px;
+  margin: 0 auto;
+  margin-bottom: 60px;
+  order: 1;
+}
+
+#where-text li {
+  padding: 10px;
+}
+
+#where-text ol {
+  padding-top: 10px;
+}
+
+#where-text h3 {
+  padding: 10px 0;
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#where img {
+  order: 2;
+}
+
+#where-text p {
+  padding: 10px;
+  text-align: center;
+}
+
+/* Tips Page "Tools" Section vvv */
+#tools {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 80px 0;
+}
+
+#tools-text {
+  color: white; 
+  background-color: #545454; 
+  border-radius: 5px;
+  padding: 10px; 
+  width: 85%;
+  max-width: 500px;
+  margin: 0 auto;
+  margin-bottom: 60px;
+  order: 1;
+}
+
+#tools img {
+  order: 2;
+}
+
+#tools-text p {
+  padding: 10px;
+  text-align: center;
+}
+
+#tools-text li {
+  padding: 10px;
+}
+
+#tools-text ol {
+  padding-top: 10px;
+}
+
+#tools-text h3 {
+  padding: 10px 0;
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Tips Page Monster Cards */
+#monsters-title {
+  text-align: center;
+  width: 70%;
+  margin: 0 auto 40px;
+}
+
+#monsters {
+  display: flex;
+  flex-direction: column;
+}
+
+#monsters div {
+  margin: 30px auto;
+  padding: 30px;
+  max-width: 300px;
+  text-align: center;
+  background-color: #545454;
+  border-radius: 5px;
+  color: white;
+}
+
+#monsters div h3 {
+  padding: 10px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#monsters div button {
+  padding: 12px;
+  border-radius: 5px;
+}
+
+#monsters div button:hover {
+  cursor: pointer;
+}
+
+#modal {
+  margin: auto auto;
+  background-color: #065e7f;
+  color: white;
+  padding: 30px;
+}
+
+#modal div {
+  display: grid;
+  grid-template-columns: 1fr 50px;
+  margin-bottom: 10px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+#modal div button {
+  padding: 9px;
+  font-size: larger;
+  height: 44px;
   align-self: center;
-  box-shadow: #0066cc;
+}
 
-  width: 80%;
-  padding: .75rem 1.25rem;
-  margin-bottom: 1rem;
-  border: 1px solid transparent;
-  border-radius: .25rem;
+#modal div button:hover {
+  cursor: pointer;
+}
+
+#modal p {
+  padding: 5px;
+}
+
+/* Tips Page content above Footer vvv */
+main h2 {
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin: 30px;
+}
+
+@media screen and (min-width: 860px) {
+  /* Header vvv */
+  nav {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+  }
+
+  nav ul {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      width: 50%;
+  }
+
+  .open-nav {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 50%;
+  }
+
+  .open-nav li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      width: 100%;
+  }
+
+  .open-nav a {
+      display: block;
+      padding: 15px;
+      border-bottom: none;
+  }
+  
+  .open-nav > :first-child {
+      border-top: none;
+  }
+
+  #hamburger {
+      display: none;
+  }
+
+  /* Footer vvv */
+  footer {
+      display: flex;
+      justify-content: space-between;
+  }
+
+  #social-footer {
+      margin: 0 auto;
+  }
+
+  /* Home Page Hero Banner vvv */
+  #hero {
+    position: static;
+    display: flex;
+    width: 95%;
+    margin: 0 auto;
+  }
+
+
+  #hero-right {
+    position: static;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 500px;
+  }
+
+  #hero-right img {
+    margin: 0 auto;
+  }
+
+  #hero-left {
+    position: static; 
+    background-color: #545454; 
+    max-width: 580px;
+    max-height: fit-content;
+    align-self: center;
+    margin: 0 auto;
+  }
+
+  /* Home Page Dice Card vvv */
+  #dice {
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  #dice img {
+    margin-right: 20px;
+  }
+
+  #dice-text {
+    width: 85%;
+    max-width: 500px;
+    margin: 0 auto;
+    height: fit-content;
+    align-self: center;
+  }
+
+  /* Feedback Card vvv */
+  #feedback {
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    margin: 0 auto;
+    order: 1;
+  }
+
+  #feedback img {
+    order: 2;
+  }
+
+  #feedback-text {
+    width: 85%;
+    max-width: 500px;
+    margin: 0 auto;
+    height: fit-content;
+    align-self: center;
+  }
+
+  #feedback img {
+    margin-left: 20px;
+  }
+
+  /* Dice Roller Page */
+  #dice-header {
+    background-color: #545454;
+    width: 40%;
+    margin: 20px auto;
+    text-align: center;
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+  }
+
+  /* Tips Page "What" Section vvv */
+  #what {
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    margin: 80px auto 130px;
+    order: 1;
+  }
+
+  #what img {
+    order: 2;
+  }
+    
+  #what-text {
+    width: 85%;
+    max-width: 500px;
+    margin: 0 auto;
+    height: fit-content;
+    align-self: center;
+  }
+    
+  #what img {
+    margin-left: 50px;
+  }
+
+  /* Tips Page "Starting" Section vvv */
+  #starting {
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    margin: 130px auto;
+    order: 2;
+  }
+
+  #starting img {
+    margin-right: 20px;
+    order: 1;
+  }
+
+  #starting-text {
+    width: 85%;
+    max-width: 500px;
+    margin: 0 auto;
+    height: fit-content;
+    align-self: center;
+  }
+
+  /* Tips Page "Characters" Section vvv */
+  #characters {
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    margin: 130px auto;
+    order: 1;
+  }
+
+  #characters img {
+    order: 2;
+  }
+    
+  #characters-text {
+    width: 85%;
+    max-width: 500px;
+    margin: 0 auto;
+    height: fit-content;
+    align-self: center;
+  }
+    
+  #characters img {
+    margin-left: 50px;
+  }
+
+  /* Tips Page "Where" Section vvv */
+  #where {
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    margin: 130px auto;
+    order: 2;
+  }
+
+  #where img {
+    margin-right: 20px;
+    order: 1;
+  }
+
+  #where-text {
+    width: 85%;
+    max-width: 500px;
+    margin: 0 auto;
+    height: fit-content;
+    align-self: center;
+  }
+
+  /* Tips Page "Tools" Section vvv */
+  #tools {
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    margin: 130px auto;
+    order: 1;
+  }
+
+  #tools img {
+    order: 2;
+  }
+    
+  #tools-text {
+    width: 85%;
+    max-width: 500px;
+    margin: 0 auto;
+    height: fit-content;
+    align-self: center;
+  }
+    
+  #tools img {
+    margin-left: 50px;
+  }
+
+  /* Tips Page Monster Cards */
+  #monsters {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 20px;
+  }
+}
+
+@media screen and (min-width: 699px) {
+  #d4 {
+      border-top: none;
+  }
 }
