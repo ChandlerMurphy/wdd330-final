@@ -4,29 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/css/style.css" rel="stylesheet">
-    <!-- <script src="scripts/dice.js"></script> -->
+    <script src="/js/dice.js" type="module"></script>
     <title>Starter Tips for D&D Beginners</title>
 </head>
 <body>
-    <header>
-        <nav>
-            <div id="nav-header">
-                <div id="nav-left">
-                    <div id="nav-header-text">
-                        <h1>B&D</h1>
-                        <p>Beginners and Dungeons</p>
-                    </div>
-                </div>
-                <button id="hamburger" title="menu-button"></button>
-            </div>
-            <ul>
-                <li><a href="/" title="Home">Home</a></li>
-                <li><a href="/dice/index.html" title="Dice" class="active">Dice</a></li>
-                <li><a href="/tips/index.html" title="Tips" >Tips</a></li>
-                <li><a href="/feedback/index.html" title="Feedback">Feedback</a></li>
-            </ul>
-        </nav>
-    </header>
+    <header id="header"></header>
     <main>
         <div id="dice-header">
             <h2>Roll The Dice</h2>
@@ -81,25 +63,6 @@
             </div>
         </div>
     </main>
-    <footer>
-        <div id="right-footer">
-            <h3>Chandler Murphy</h3>
-            <p>chandlermurphy02@gmail.com</p>
-            <p>(385) 377-4130</p>
-        </div>
-        <div id="social-footer">
-            <a href="https://www.facebook.com/chandler.murphy.391" title="Chandler Facebook Profile Link">
-                <img src="/public/images/fb-icon.png" alt="Facebook Logo">
-            </a>
-            <a href="https://www.linkedin.com/in/chandler-murphy/" title="Chandler Murphy Indeed Profile Link">
-                <img src="/public/images/indeed-icon.png" alt="Indeed Logo">
-            </a>
-        </div>
-        <div id="left-footer">
-            <p>WDD 231 Final Project</p>
-            <p>© <span id="currentyear"></span></p>
-            <p class="last-updated">Last Modification: <span id="lastUpdated"></span></p>
-        </div>
-    </footer>
+    <footer id="footer"></footer>
 </body>
 </html>
