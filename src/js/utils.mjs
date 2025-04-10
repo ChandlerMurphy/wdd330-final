@@ -47,10 +47,10 @@ export function loadHeaderFooter(activePage) {
         </div>
         <div id="social-footer">
             <a href="https://www.facebook.com/chandler.murphy.391" title="Chandler Facebook Profile Link">
-                <img src="/public/images/fb-icon.png" alt="Facebook Logo">
+                <img src="/images/fb-icon.png" alt="Facebook Logo">
             </a>
             <a href="https://www.linkedin.com/in/chandler-murphy/" title="Chandler Murphy Indeed Profile Link">
-                <img src="/public/images/indeed-icon.png" alt="Indeed Logo">
+                <img src="/images/indeed-icon.png" alt="Indeed Logo">
             </a>
         </div>
         <div id="left-footer">
