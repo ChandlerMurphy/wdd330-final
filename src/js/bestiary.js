@@ -102,7 +102,7 @@ document.addEventListener("DOMContentLoaded", () => {
     fetchAllDragons();
 
     // Code for fetching Character Card info
-    fetch("../public/json/characters.json")
+    fetch("/json/characters.json")
         .then(response => {
             if (!response.ok) {
                 throw new Error("Failed to load characters.json");
@@ -134,6 +134,7 @@ document.addEventListener("DOMContentLoaded", () => {
             console.error("Error loading hero data:", error);
         });
     
+    // Code for generating a random name with an API    
     const generateButton = document.getElementById("generate-hero");
     const nameDisplay = document.getElementById("random-name");
 
