@@ -1,0 +1,45 @@
+{
+    "heroes": [
+      {
+        "name": "Aelira Moonshadow",
+        "race": "Elf",
+        "class": "Ranger",
+        "level": 5,
+        "hit_points": 42,
+        "alignment": "Chaotic Good",
+        "background": "Outlander",
+        "description": "Aelira is a lone wanderer with a deep bond to nature and a vendetta against dark creatures that plague the wild."
+      },
+      {
+        "name": "Thorben Ironfist",
+        "race": "Dwarf",
+        "class": "Fighter",
+        "level": 4,
+        "hit_points": 53,
+        "alignment": "Lawful Neutral",
+        "background": "Soldier",
+        "description": "A seasoned warrior who served in the mountain wars, Thorben is loyal, disciplined, and always ready to protect his allies."
+      },
+      {
+        "name": "Nyx Vexx",
+        "race": "Tiefling",
+        "class": "Warlock",
+        "level": 3,
+        "hit_points": 24,
+        "alignment": "Neutral Evil",
+        "background": "Charlatan",
+        "description": "A trickster who made a pact with a dark entity for power, Nyx hides her sinister edge behind a charming smile."
+      },
+      {
+        "name": "Milo Underfoot",
+        "race": "Halfling",
+        "class": "Rogue",
+        "level": 4,
+        "hit_points": 31,
+        "alignment": "Chaotic Neutral",
+        "background": "Criminal",
+        "description": "Sneaky, fast, and always two steps ahead, Milo thrives in the shadows and lives for the next big score."
+      }
+    ]
+  }
+  

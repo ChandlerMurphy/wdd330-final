@@ -32,8 +32,9 @@ export function loadHeaderFooter(activePage) {
             </div>
             <ul>
                 <li><a href="/" title="Home"${activePage === "home" ? ' class="active"' : ""}>Home</a></li>
-                <li><a href="/dice/index.html" title="Dice"${activePage === "dice" ? ' class="active"' : ""}>Dice</a></li>
                 <li><a href="/tips/index.html" title="Tips"${activePage === "tips" ? ' class="active"' : ""}>Tips</a></li>
+                <li><a href="/dice/index.html" title="Dice"${activePage === "dice" ? ' class="active"' : ""}>Dice</a></li>
+                <li><a href="/bestiary/index.html" title="Bestiary"${activePage === "bestiary" ? ' class="active"' : ""}>Bestiary</a></li>
                 <li><a href="/feedback/index.html" title="Feedback"${activePage === "feedback" ? ' class="active"' : ""}>Feedback</a></li>
             </ul>
         </nav>

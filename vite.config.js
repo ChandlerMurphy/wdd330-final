@@ -13,7 +13,6 @@ export default defineConfig({
         feedback: resolve(__dirname, "src/feedback/index.html"),
         bestiary: resolve(__dirname, "src/bestiary/index.html"),
         dice: resolve(__dirname, "src/dice/index.html"),
-        // account: resolve(__dirname, "src/account/index.html"),
       },
     },
   },
