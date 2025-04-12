@@ -62,15 +62,15 @@ document.addEventListener("DOMContentLoaded", () => {
     const dialogButton = document.querySelector("#modal-close");
     const dialogText = document.querySelector("#monster-info");
 
-    function displayMonsterCards(monsters) {
-        monsters.forEach(monster => {
+    function displayMonsterCards(beasts) {
+        beasts.forEach(beast => {
             const card = document.createElement("div");
             const title = document.createElement("h3")
             const button = document.createElement("button");
 
-            title.textContent = `Monster: ${monster.name}`;
+            title.textContent = `Monster: ${beast.name}`;
             button.textContent = `Learn More`;
-            button.addEventListener("click", () => showStuff(monster));
+            button.addEventListener("click", () => showStuff(beast));
 
             card.appendChild(title);
             card.appendChild(button);
@@ -102,19 +102,19 @@ document.addEventListener("DOMContentLoaded", () => {
     fetchAllDragons();
 
     // Code for fetching Character Card info
-    fetch('../public/json/characters.json')
+    fetch("../public/json/characters.json")
         .then(response => {
             if (!response.ok) {
-                throw new Error('Failed to load characters.json');
+                throw new Error("Failed to load characters.json");
             }
             return response.json();
         })
         .then(data => {
-            const heroesContainer = document.getElementById('heroes');
+            const heroesContainer = document.getElementById("heroes");
 
             data.heroes.forEach(hero => {
-                const card = document.createElement('div');
-                card.classList.add('hero-card');
+                const card = document.createElement("div");
+                card.classList.add("hero-card");
 
                 card.innerHTML = `
                     <h3>${hero.name}</h3>
@@ -131,7 +131,7 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         })
         .catch(error => {
-            console.error('Error loading hero data:', error);
+            console.error("Error loading hero data:", error);
         });
     
     const generateButton = document.getElementById("generate-hero");
