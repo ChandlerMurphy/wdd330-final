@@ -30,6 +30,6 @@ document.addEventListener("DOMContentLoaded", () => {
         localStorage.setItem("numVisits", numVisits + 1);
 
         // Redirect to the success page
-        window.location.href = "/feedback/success.html";
+        window.location.href = "success.html";
     });
 });

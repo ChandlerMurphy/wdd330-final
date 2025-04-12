@@ -11,6 +11,7 @@ export default defineConfig({
         main: resolve(__dirname, "src/index.html"),
         tips: resolve(__dirname, "src/tips/index.html"),
         feedback: resolve(__dirname, "src/feedback/index.html"),
+        success: resolve(__dirname, "src/feedback/index.html"),
         bestiary: resolve(__dirname, "src/bestiary/index.html"),
         dice: resolve(__dirname, "src/dice/index.html"),
       },
