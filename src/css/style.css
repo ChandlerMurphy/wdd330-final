@@ -784,9 +784,11 @@ form {
   padding: 30px;
   max-width: 300px;
   text-align: center;
-  background-color: #545454;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
   border-radius: 5px;
-  color: white;
+  color: black;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 #monsters div h3 {
@@ -797,6 +799,8 @@ form {
 #monsters div button {
   padding: 12px;
   border-radius: 5px;
+  background-color: #545454;
+  color: white;
 }
 
 #monsters div button:hover {
