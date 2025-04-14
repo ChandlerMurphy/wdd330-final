@@ -898,7 +898,7 @@ form {
 
 #random-name {
   font-weight: bold;
-  color: #4b2e0d;
+  color: black;
   margin-bottom: 16px;
   padding: 10px;
   border-bottom: 1px solid #d4af37;
@@ -906,7 +906,7 @@ form {
 
 #generate-hero {
   background-color: #d4af37;
-  color: #4b2e0d;
+  color: black;
   border: none;
   padding: 10px 20px;
   font-size: 16px;
